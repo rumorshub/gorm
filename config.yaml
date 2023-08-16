@@ -1,0 +1,68 @@
+gorm:
+  mysql_default:
+    skip_default_transaction: false
+    prepare_stmt: false
+    disable_nested_transaction: false
+    allow_global_update: false
+    disable_automatic_ping: false
+    disable_foreign_key_constraint_when_migrating: false
+    ignore_relationships_when_migrating: false
+    translate_error: false
+    mysql:
+      driver_name:
+      server_version:
+      dsn: "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
+      skip_initialize_with_version: false
+      default_string_size: 256
+#      default_datetime_precision:
+      disable_with_returning: false
+      disable_datetime_precision: false
+      dont_support_rename_index: false
+      dont_support_rename_column: false
+      dont_support_rename_column_unique: false
+      dont_support_for_share_clause: false
+      dont_support_null_as_default_value: false
+
+  postgresql_default:
+    skip_default_transaction: false
+    prepare_stmt: false
+    disable_nested_transaction: false
+    allow_global_update: false
+    disable_automatic_ping: false
+    disable_foreign_key_constraint_when_migrating: false
+    ignore_relationships_when_migrating: false
+    translate_error: false
+    postgresql:
+      driver_name:
+      dsn: "host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai"
+      prefer_simple_protocol: false
+      without_returning: false
+
+  sqlserver_default:
+    skip_default_transaction: false
+    prepare_stmt: false
+    disable_nested_transaction: false
+    allow_global_update: false
+    disable_automatic_ping: false
+    disable_foreign_key_constraint_when_migrating: false
+    ignore_relationships_when_migrating: false
+    translate_error: false
+    sqlserver:
+      driver_name:
+      dsn: "sqlserver://gorm:LoremIpsum86@localhost:9930?database=gorm"
+      default_string_size: 256
+
+  sqlite_default:
+    skip_default_transaction: false
+    prepare_stmt: false
+    disable_nested_transaction: false
+    allow_global_update: false
+    disable_automatic_ping: false
+    disable_foreign_key_constraint_when_migrating: false
+    ignore_relationships_when_migrating: false
+    translate_error: false
+    sqlite:
+      driver_name:
+      dsn: "sqlite.db"
+#      dsn: "file::memory:?cache=shared" # cgo
+#      dsn: ":memory:?_pragma=busy_timeout(10000)&_pragma=journal_mode(WAL)&_pragma=journal_size_limit(200000000)&_pragma=synchronous(NORMAL)&_pragma=foreign_keys(ON)&_pragma=temp_store(MEMORY)&_pragma=cache_size(-16000)" # nocgo
